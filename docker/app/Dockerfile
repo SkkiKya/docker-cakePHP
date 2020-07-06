@@ -24,7 +24,9 @@ RUN yum -y --enablerepo=remi,remi-php74 install \
     php-pecl-apcu \
     php-xml \
     php-xmlrpc \
-    php-intl
+    php-intl \
+    php-pecl-xdebug \
+    iproute
 
 # httpd.conf のログを stdout, stderr に繋ぐ
 RUN ln -sf /dev/stdout /var/log/httpd/access_log && \
