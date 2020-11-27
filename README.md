@@ -10,9 +10,9 @@ makefileに短縮コマンドを設定しております。
 + `$make build`
 + `$make up`
 
-[cakePHP](http://localhost:8765/)
+cakePHP: http://localhost:8765/
 
-[phpmyadmin](http://localhost:8764/)
+phpmyadmin: http://localhost:8764/
 
 appコンテナでは，
   - ./data/cake_php 
@@ -26,7 +26,7 @@ mysqlコンテナでは，
 phpmyadminコンテナでは，
 mysqlコンテナと接続してあるphpmyadminを使えます。
 
-[phpmyadmin](http://localhost:8764/)
+phpmyadmin: http://localhost:8764/
 
 LAMP環境の構成
   - Linux: CentOS7
