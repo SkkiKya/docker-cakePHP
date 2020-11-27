@@ -6,7 +6,7 @@ services:
         ports:
           - 8093:80
         volumes:
-          - "./data/sample_app:/sample_app"
+          - "./data/cake_app:/cake_app"
 # cakePHPのインストールフォルダを永続化しています
           - "./docker/app/httpd.conf:/etc/httpd/conf/httpd.conf"
 # Apache設定ファイルのhttpd.confを永続化しています
