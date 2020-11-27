@@ -31,5 +31,5 @@ LAMP環境の構成
 
 makefileに短縮コマンドを設定しております。
 例
-起動時: 
+起動:
   $ make up = $ docker-compose up -d
