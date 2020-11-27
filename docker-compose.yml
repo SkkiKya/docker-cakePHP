@@ -4,7 +4,7 @@ services:
         build:
             context: "docker/app/"
         ports:
-          - 8093:80
+          - 8765:80
         volumes:
           - "./data/cake_app:/cake_app"
 # cakePHPのインストールフォルダを永続化しています
@@ -26,7 +26,7 @@ services:
     phpmyadmin:
         image: phpmyadmin/phpmyadmin:latest
         ports:
-          - 8094:80
+          - 8764:80
         environment:
           - PMA_HOST=mysql
           - PMA_USER=root
