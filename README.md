@@ -26,8 +26,6 @@ mysqlコンテナでは，
 phpmyadminコンテナでは，
 mysqlコンテナと接続してあるphpmyadminを使えます。
 
-phpmyadmin: http://localhost:8764/
-
 LAMP環境の構成
   - Linux: CentOS7
   - Apache: Apache
