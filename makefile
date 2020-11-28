@@ -25,3 +25,17 @@ sql:
 
 root:
 	docker-compose exec mysql mysql -u root -p
+
+branch:
+	git branch
+
+push:
+	git add .
+	git commit -m "README.md fixed"
+	git push origin CMS
+
+main:
+	git checkout main
+
+pull:
+	git pull origin main
