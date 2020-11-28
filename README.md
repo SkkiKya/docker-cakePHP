@@ -30,7 +30,7 @@ phpmyadmin: http://localhost:8764/
 
 LAMP環境の構成
   - Linux: CentOS7
-  - Apache: Apache/2.4.38 
-  - MySQL: 7.4.11
-  - PHP:  7.4.11
+  - Apache: Apache
+  - MySQL: 5.7
+  - PHP:  7.4
 

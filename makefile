@@ -6,7 +6,7 @@ composer:
 	docker-compose exec app mv composer.phar /usr/local/bin/composer
 
 cake:
-	docker-compose exec app composer self-update && docker-compose exec app composer create-project --prefer-dist cakephp/app:4.1.2
+	docker-compose exec app composer self-update && docker-compose exec app composer create-project --prefer-dist cakephp/app:4.1.6
 
 build:
 	docker-compose build
@@ -16,3 +16,12 @@ up:
 
 stop:
 	docker-compose stop
+
+app:
+	docker-compose exec app /bin/bash
+
+sql:
+	docker-compose exec mysql /bin/bash
+
+root:
+	docker-compose exec mysql mysql -u root -p
