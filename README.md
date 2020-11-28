@@ -3,7 +3,7 @@
 
 [LAMP+CakePHP3開発環境をVSCodeRemote+Dockerで構築① -Docker編-](https://qiita.com/goodkei/items/24143d5fa129890d2a7f)を参考に作成した環境です。
 
-makefileに短縮コマンドを設定しております。
+makefileに短縮コマンドを設定しております。(windowsだと拡張が必要だったような)
 例
 起動:
   * `$ make up `=`$ docker-compose up -d`
