@@ -17,12 +17,14 @@ makefileに短縮コマンドを設定しております。(windowsだと拡張�
 + `$make build`
 + `$make up`
 
+# アプリケーションについて
 アプリケーション: http://localhost:8765/ 
 
 phpmyadmin: http://localhost:8764/ 
 
 初めは，Apacheの画面が出てきます。 
 
+# cakePHPをダウンロード
 cakePHPをダウンロードするためのコマンドを実行します。 
 ※このコマンドは，コンテナ内のcake_appフォルダで使ってください。 
 具体的には，docker-compose.ymlが存在するディレクトリに合わせて，  
@@ -33,6 +35,7 @@ cakePHPをダウンロードするためのコマンドを実行します。
 
 これでcakePHPがダウンロードされて，ホスト側のdata/cake_appにもcakePHPがコピーされております。
 
+# Apache側の設定
 docker/app/httpd.conf において, 
 125行目の
 `DocumentRoot "/var/www/html"` 
@@ -57,10 +60,11 @@ docker/app/httpd.conf において,
 
 cakePHP: http://localhost:8765/ 
 
+# phpmyadminについて
 phpmyadminコンテナでは，
 mysqlコンテナと接続してあるphpmyadminを使えます。(http://localhost:8764/ ) 
 
-
+# DB接続
 このままではDB接続ができていないので，DB接続をします。 
 app_local.php でlocal環境でのDB接続が，設定できます。 
 [dockerでCakePHPの環境構築をした時に、データベースに接続できない](https://qiita.com/nagimaruxxx/items/7880e4077d24255aac5d)を見て，localのコンテナのアドレスやらユーザーネームやらをapp_local.phpの内容を変更して，DB接続ができました。
