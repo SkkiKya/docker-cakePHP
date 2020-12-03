@@ -1,0 +1,39 @@
+version: "3"
+services:
+    app:
+        container_name: "cake"
+        build:
+            context: "docker/app/"
+        ports:
+          - 8765:80
+        volumes:
+          - ./data/cake_app:/cake_app
+# cakePHPのインストールフォルダを永続化しています
+          - "./docker/app/httpd.conf:/etc/httpd/conf/httpd.conf"
+# Apache設定ファイルのhttpd.confを永続化しています
+        depends_on:
+          - mysql
+    mysql:
+        container_name: "mysql_database"
+        build:
+             context: "docker/mysql/"
+        environment:
+          - MYSQL_DATABASE=sampledb
+          - MYSQL_HOST=localhost
+          - MYSQL_USER=root
+          - MYSQL_ROOT_PASSWORD=mypassword
+        volumes:
+          - "./data/db:/var/lib/mysql"
+# mysqlのデータベースをを永続化しています
+    phpmyadmin:
+        container_name: "phpmyadmin"
+        image: phpmyadmin/phpmyadmin:latest
+        ports:
+          - 8764:80
+        environment:
+          - PMA_HOST=mysql
+          - PMA_USER=root
+          - PMA_PASSWORD=mypassword
+        depends_on:
+          - mysql
+        

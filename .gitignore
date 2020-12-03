@@ -1,0 +1,4 @@
+/data/db/*
+/data/cake_app/*
+db.sql
+!.gitkeep
